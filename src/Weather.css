@@ -1,0 +1,158 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600&display=swap');
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('./background.jpg');  /* Set the background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.weather-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.weather-app main {
+    background-color: rgba(255, 255, 255, 0.9);  /* Slightly transparent white background */
+    /* border-radius: 12px; */
+    box-shadow: 0 8px 16px rgba(58, 112, 187, 0.929);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.weather-app main:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Search box styling */
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: calc(100% - 120px);
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0056b3, #0099ff);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather info styling */
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info .location {
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.weather-info:hover .location {
+    color: #007bff;
+}
+
+.weather-info .date {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.weather-info .current-weather {
+    margin-bottom: 20px;
+}
+
+.weather-info .temperature {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* .weather-info:hover .temperature {
+    color: #007bff;
+} */
+
+.weather-info .description {
+    font-size: 22px;
+    color: #777;
+}
+
+.weather-info .details {
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.weather-info .details div {
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .search-bar {
+        width: calc(100% - 120px);
+    }
+    
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
